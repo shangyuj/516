@@ -25,7 +25,7 @@ w_titlecase = [w for w in text6 if w.istitle()]
 
 # Now I'm printing the lists.
 # The f-strings allow me to print words and variables at the same time.
-# I added line breaks to make the output more readable.
+# I used \n to add line breaks to make the output more readable for myself.
 
 print(f'\nWords in text6 that end in ise:\n{w_ise}\n')
 print(f'Words in text6 that contain the letter z:\n{w_z}\n')
@@ -51,7 +51,7 @@ w_four = [w for w in sent if len(w) > 4]
 
 # Now I'm printing the lists.
 # The f-strings allow me to print words and variables at the same time.
-# I added line breaks to make the output more readable.
+# I used \n to add line breaks to make the output more readable for myself.
 
 print(f'\nWords in sent that begin with sh:\n{w_sh}\n')
 print(f'Words in sent that are longer than four characters:\n{w_four}')
