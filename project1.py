@@ -1,4 +1,4 @@
-# Ex. 24: Write expressions for finding all words in text6 that meet the conditions listed below. 
+# Ex. 24: Write expressions for finding all words in text6 that meet the conditions listed below.
 #         The result should be in the form of a list of words: ['word1', 'word2', ...].
 #           a. Ending in ise
 #           b. Containing the letter z
@@ -33,7 +33,7 @@ sent = ['she', 'sells', 'sea', 'shells', 'by', 'the', 'sea', 'shore']
 w_sh = [w for w in sent if w.startswith("sh")]         # If a word in sent starts with sh, put the word in a list named w_sh.
 w_four = [w for w in sent if len(w) > 4]               # If the length of a word in sent is larger than 4, put the word in a list named w_four.
 
-# Now I'm printing the lists.
+# Below is where I print the lists.
 # The f-strings allow me to print words and variables at the same time.
 # I used \n to add line breaks to make the output more readable for myself.
 
