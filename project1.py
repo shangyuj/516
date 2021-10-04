@@ -7,23 +7,12 @@
 
 from nltk.book import *
 
-# If a word in text6 ends with ise, put the word in a list named w_ise.
+w_ise = [w for w in text6 if w.endswith('ise')]                          # If a word in text6 ends with ise, put the word in a list named w_ise.
+w_z = [w for w in text6 if 'z' in w]                                     # If a word in text6 contains z, put the word in a list named w_z.
+w_pt = [w for w in text6 if 'pt' in w]                                   # If a word in text6 contains pt, put the word in a list named w_pt.
+w_titlecase = [w for w in text6 if w.istitle()]                          # If a word in text6 is titlecase, put the word in a list named w_titlecase.
 
-w_ise = [w for w in text6 if w.endswith('ise')]
-
-# If a word in text6 contains z, put the word in a list named w_z.
-
-w_z = [w for w in text6 if 'z' in w]
-
-# If a word in text6 contains pt, put the word in a list named w_pt.
-
-w_pt = [w for w in text6 if 'pt' in w]
-
-# If a word in text6 is titlecase, put the word in a list named w_titlecase.
-
-w_titlecase = [w for w in text6 if w.istitle()]
-
-# Now I'm printing the lists.
+# Below is where I print the lists.
 # The f-strings allow me to print words and variables at the same time.
 # I used \n to add line breaks to make the output more readable for myself.
 
@@ -41,13 +30,8 @@ print(f'Words in text6 that are titlecase:\n{w_titlecase}')
 
 sent = ['she', 'sells', 'sea', 'shells', 'by', 'the', 'sea', 'shore']
 
-# If a word in sent starts with sh, put the word in a list named w_sh.
-
-w_sh = [w for w in sent if w.startswith("sh")]
-
-# If the length of a word in sent is larger than 4, put the word in a list named w_four.
-
-w_four = [w for w in sent if len(w) > 4]
+w_sh = [w for w in sent if w.startswith("sh")]                           # If a word in sent starts with sh, put the word in a list named w_sh.
+w_four = [w for w in sent if len(w) > 4]                                 # If the length of a word in sent is larger than 4, put the word in a list named w_four.
 
 # Now I'm printing the lists.
 # The f-strings allow me to print words and variables at the same time.
