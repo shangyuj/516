@@ -1,7 +1,3 @@
-#IMPORTANT: Comment out the code of the first program before you run the second program!
-
-###########################################################################
-
 #18. Write a program to print the 50 most frequent bigrams (pairs of adjacent words) of a text, omitting bigrams that contain stopwords.
 
 #README:
@@ -24,9 +20,10 @@ if len(sys.argv) == 1:
     filename = input("Type in the filename and press enter: ")
 
 #This reads the file and tokenizes the text string using NLTK.
-input = open(filename)
-input = input.read()
-input = word_tokenize(input)
+textfile = open(filename)
+inputtext = textfile.read()
+inputtext = word_tokenize(inputtext)
+textfile.close()
 
 def fifty_most_frequent_bigrams(text):
     text_without_stopword = [word for word in text
@@ -37,7 +34,7 @@ def fifty_most_frequent_bigrams(text):
     return frequent_bigrams.most_common(50) #Keeping the top 50 most common bigrams
 
 #This takes the tokenized text and pass it through the above program
-output_list = fifty_most_frequent_bigrams(input)
+output_list = fifty_most_frequent_bigrams(inputtext)
 
 #This turns the output list into a string so that it can be printed into a text file.
 output_str = str(output_list)
