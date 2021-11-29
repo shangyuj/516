@@ -13,10 +13,10 @@ text = re.sub(r"gramme", "gram", text, 0, re.MULTILINE | re.IGNORECASE)
 text = re.sub(r"(\w{2,})our", "\\1or", text, 0, re.MULTILINE | re.IGNORECASE)
 
 # Convert -logue to -log
-text = re.sub(r"(\w{2,})logue\b", "\\1log", text, 0, re.MULTILINE | re.IGNORECASE)
-text = re.sub(r"(\w{2,})logued\b", "\\1loged", text, 0, re.MULTILINE | re.IGNORECASE)
-text = re.sub(r"(\w{2,})logues\b", "\\1logs", text, 0, re.MULTILINE | re.IGNORECASE)
-text = re.sub(r"(\w{2,})loguing\b", "\\1loging", text, 0, re.MULTILINE | re.IGNORECASE)
+text = re.sub(r"(\w{2,})logue\b", r"\1log", text, 0, re.MULTILINE | re.IGNORECASE)
+text = re.sub(r"(\w{2,})logued\b", r"\1loged", text, 0, re.MULTILINE | re.IGNORECASE)
+text = re.sub(r"(\w{2,})logues\b", r"\1logs", text, 0, re.MULTILINE | re.IGNORECASE)
+text = re.sub(r"(\w{2,})loguing\b", r"\1loging", text, 0, re.MULTILINE | re.IGNORECASE)
 
 # Convert -ise to -ize, proceeded by the letter c, d, g, l, m, n, r, s, t, or v, avoid words like "rise"
 text = re.sub(r"(\w{2,})([cdglmnrstv])ise", "\\1\\2ize", text, 0, re.MULTILINE | re.IGNORECASE)
