@@ -1,3 +1,5 @@
+# Group project by Erika, Maryam, Nadia, Shangyu, and Slava
+
 import re
 import os
 import sys
