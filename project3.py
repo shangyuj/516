@@ -23,9 +23,9 @@ text = re.sub(r"\Blogues\b", r"logs", text, 0, re.MULTILINE | re.IGNORECASE)
 text = re.sub(r"\Bloguing\b", r"logging", text, 0, re.MULTILINE | re.IGNORECASE)
 
 # Convert -ise to -ize, proceeded by the letter c, d, g, l, m, n, r, s, t, or v
-# Avoid matching -ise that is proceeded by just one letter, like "rise"
-text = re.sub(r"(\w{2,})([cdglmnrstv])ise", r"\1\2ize", text, 0, re.MULTILINE | re.IGNORECASE)
-text = re.sub(r"(\w{2,})([cdglmnrstv])ising", r"\1\2izing", text, 0, re.MULTILINE | re.IGNORECASE)
+# Avoid matching -ise that is proceeded by just one or two letters, like "rise" and "arise"
+text = re.sub(r"(\w{3,})([cdglmnrstv])ise", r"\1\2ize", text, 0, re.MULTILINE | re.IGNORECASE)
+text = re.sub(r"(\w{3,})([cdglmnrstv])ising", r"\1\2izing", text, 0, re.MULTILINE | re.IGNORECASE)
 
 # Convert -isation to -ization
 text = re.sub(r"isation", r"ization", text, 0, re.MULTILINE | re.IGNORECASE)
